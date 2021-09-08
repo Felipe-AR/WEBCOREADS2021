@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WEBCOREADS2021.Models;
 
 namespace WEBCOREADS2021
 {
@@ -25,7 +26,8 @@ namespace WEBCOREADS2021
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Contexto>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("WEBCOREADS2021")));
+              options.UseSqlServer(Configuration.GetConnectionString("WEBCOREADS2021")));
+
             services.AddControllersWithViews();
         }
 
