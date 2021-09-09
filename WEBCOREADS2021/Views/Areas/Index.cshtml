@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WEBCOREADS2021.Models.Dominio.Agricultor>
+﻿@model IEnumerable<WEBCOREADS2021.Models.Dominio.Area>
 
 @{
     ViewData["Title"] = "Index";
@@ -14,7 +14,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.proprietario)
+                @Html.DisplayNameFor(model => model.hectares)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.municipio)
@@ -23,13 +23,7 @@
                 @Html.DisplayNameFor(model => model.bairro)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cpf)
+                @Html.DisplayNameFor(model => model.gps)
             </th>
             <th></th>
         </tr>
@@ -38,7 +32,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.proprietario)
+                @Html.DisplayFor(modelItem => item.hectares)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.municipio)
@@ -47,13 +41,7 @@
                 @Html.DisplayFor(modelItem => item.bairro)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.idade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.cpf)
+                @Html.DisplayFor(modelItem => item.gps)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
